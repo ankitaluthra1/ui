@@ -1,11 +1,10 @@
 import * as React from 'react';
-import {Route} from "react-router-dom";
-
-const Header = () => <div><h1>Header</h1></div>;
-const Requests = () => <div><h1>Requests</h1></div>;
-const Dashboard = () => <div><h1>Dashboard</h1></div>;
-const Body = (props) => <div>{props.children}</div>;
-const Footer = () => <div><h1>Footer</h1></div>;
+import {Route} from 'react-router-dom';
+import Dashboard from '../Dashboard/Dashboard';
+import Requests from '../Requests/Requests';
+import Header from '../Header/Header';
+import Body from '../Body/Body';
+import Footer from '../Footer/Footer';
 
 export default class Layout extends React.Component {
   render() {
