@@ -10,7 +10,8 @@
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17",
-    "redux": "^3.7.2"
+    "redux": "^3.7.2",
+    "redux-form": "^7.2.0"
   },
   "scripts": {
     "start-js": "react-scripts start",
@@ -34,8 +35,9 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.5.1",
     "node-sass-chokidar": "^0.0.3",
-    "react-test-renderer": "^16.2.0",
     "normalize.css": "^7.0.0",
-    "npm-run-all": "^4.1.2"
+    "npm-run-all": "^4.1.2",
+    "react-test-renderer": "^16.2.0",
+    "redux-devtools-extension": "^2.13.2"
   }
 }
