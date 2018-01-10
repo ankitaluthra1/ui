@@ -6,10 +6,10 @@ import Header from '../../Header/Header';
 import Footer from '../../Footer/Footer';
 import Body from '../../Body/Body';
 import Dashboard from '../../Dashboard/Dashboard';
-import Requests from '../../Requests/Requests';
+import RequestFormContainer from '../../RequestForm/RequestFormContainer';
 
 describe('Layout Component', () => {
-  const getComponent = () => shallow(<Layout/>);
+  const getComponent = () => shallow(<Layout />);
 
   it('should have header component', () => {
     const component = getComponent();
@@ -30,8 +30,8 @@ describe('Layout Component', () => {
 
     const requestsRoute = body.childAt(1).find(Route);
     expect(requestsRoute).toHaveLength(1);
-    expect(requestsRoute.props().path).toBe('/requests');
-    expect(requestsRoute.props().component).toBe(Requests);
+    expect(requestsRoute.props().path).toBe('/requests/new');
+    expect(requestsRoute.props().component).toBe(RequestFormContainer);
   });
 
   it('should have footer component', () => {
