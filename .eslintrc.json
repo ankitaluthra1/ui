@@ -1,4 +1,12 @@
 {
-    "extends": "airbnb",
-    "plugins": ["react"]
+  "extends": "airbnb",
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "object-curly-spacing": [
+      "error",
+      "never"
+    ]
+  }
 }
