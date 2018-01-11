@@ -1,11 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './header.css';
+import Logo from '../Logo/Logo';
+import Navigation from '../Navigation/Navigation';
 
-const Header = props => <header className="header">{props.children}</header>;
-
-Header.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.node).isRequired,
-};
+const Header = () => (
+  <header className="header">
+    <Logo />
+    <Navigation />
+  </header>
+);
 
 export default Header;
