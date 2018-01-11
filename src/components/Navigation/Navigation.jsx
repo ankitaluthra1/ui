@@ -3,8 +3,10 @@ import './Navigation.css';
 
 const Navigation = () => (
   <nav className="navigation">
-    <a href="#">Home</a>
-    <a href="#">Reports</a>
+    <ul>
+      <li className="active">Home</li>
+      <li>Reports</li>
+    </ul>
   </nav>
 );
 
