@@ -1,0 +1,14 @@
+//colors
+$white: #ffffff;
+$blue: #134571;
+$teal-green: #77ebff;
+$red: #d0021b;
+$dark-grey: #6d6e71;
+
+$brand-primary: $blue;
+$brand-primary-light: lighten($brand-primary, 65%);
+$brand-secondary: $teal-green;
+$brand-warning: $red;
+$brand-warning-light: lighten($brand-warning, 50%);
+
+$muted-text:$dark-grey;

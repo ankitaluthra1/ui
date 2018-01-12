@@ -1,5 +1,5 @@
 import React from 'react';
-import './AccountControl.css';
+import './AccountControl.scss';
 
 const AccountControl = () => (
   <div className="account-control">
