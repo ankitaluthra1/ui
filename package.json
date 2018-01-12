@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start:dev": "webpack-dev-server",
-    "test": "jest",
+    "test": "jest --env=jsdom",
+    "test:watch": "jest --env=jsdom --watch",
     "test:coverage": "jest --coverage",
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",
