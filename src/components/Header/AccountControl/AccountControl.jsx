@@ -3,7 +3,7 @@ import './AccountControl.scss';
 
 const AccountControl = () => (
   <div className="account-control">
-    <a href="#">John Doe</a>
+    <p>John Doe</p>
   </div>
 );
 
