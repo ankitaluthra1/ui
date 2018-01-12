@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import {shallow} from 'enzyme';
 import Navigation from '../Navigation/Navigation';
 
@@ -7,8 +7,8 @@ describe('Navigation component', () => {
   let links;
 
   beforeEach(() => {
-    const component = shallow(<Navigation/>);
-    links = component.find(Link);
+    const component = shallow(<Navigation />);
+    links = component.find(NavLink);
   });
 
   it('should have 2 links', () => {
@@ -16,10 +16,16 @@ describe('Navigation component', () => {
   });
 
   it('should have link to home', () => {
-    expect(links.at(0).props().to).toBe('/');
+    const homeLink = links.at(0).props();
+    expect(homeLink.to).toBe('/');
+    expect(homeLink.exact).toBeDefined();
+    expect(homeLink.activeClassName).toBe('active');
   });
 
   it('should have link to reports', () => {
-    expect(links.at(1).props().to).toBe('/reports');
+    const reportsLink = links.at(1).props();
+    expect(reportsLink.to).toBe('/reports');
+    expect(reportsLink.exact).toBeDefined();
+    expect(reportsLink.activeClassName).toBe('active');
   });
 });

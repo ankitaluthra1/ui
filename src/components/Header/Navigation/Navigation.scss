@@ -4,7 +4,7 @@
     padding: 0;
     list-style: none;
     display: flex;
-    
+
     li {
       cursor: pointer;
       line-height: 60px;
@@ -14,9 +14,14 @@
       border-bottom: 5px solid transparent;
       margin-right: 60px;
 
-      &:active, &.active {
-        font-weight: 700;
-        border-bottom: 5px solid #fff;
+      a {
+        color: #fff;
+        text-decoration: none;
+
+        &:active, &.active {
+          font-weight: 700;
+          border-bottom: 5px solid #fff;
+        }
       }
 
       &:last-child {
