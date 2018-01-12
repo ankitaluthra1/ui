@@ -1,6 +1,7 @@
+@import '../../styles/variables';
 .header{
   height: 65px;
-	background: #134571;
+	background: $brand-primary;
 	box-shadow: 0 0 8px 0 #e7e8ef;
 	display: flex;
 	justify-content: space-between;
