@@ -1,9 +1,10 @@
 import {reduxForm} from 'redux-form';
 import RequestForm from './RequestForm';
+import {submitRequestForm} from './requestFormActions';
 
 const RequestFormContainer = reduxForm({
   form: 'RequestForm',
-  onSubmit: values => console.log(values),
+  onSubmit: submitRequestForm,
 })(RequestForm);
 
 export default RequestFormContainer;
