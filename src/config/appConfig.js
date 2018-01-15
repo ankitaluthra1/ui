@@ -1,1 +1,1 @@
-export const SERVICE_HOST = 'http://localhost:3000';
+export const SERVICE_HOST = 'http://localhost:8080';
