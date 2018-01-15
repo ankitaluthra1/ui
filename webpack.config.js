@@ -11,10 +11,12 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.join(__dirname, 'path'),
+    publicPath: '/',
   },
 
   devServer: {
     port: 3000,
+    historyApiFallback: true,
   },
 
   resolve: {
