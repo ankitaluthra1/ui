@@ -2,10 +2,12 @@
   "extends": "airbnb",
   "plugins": [
     "react",
-    "jest"
+    "jest",
+    "jasmine"
   ],
   "env": {
-    "jest/globals": true
+    "jest/globals": true,
+    "jasmine": true
   },
   "rules": {
     "object-curly-spacing": [
