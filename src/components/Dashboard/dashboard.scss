@@ -1,12 +1,114 @@
-@import "../../styles/variables";
-
+@import '../../styles/variables';
 .dashboard {
-  background: $white;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.intro-header {
+    display: flex;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+.heading {
+    margin-bottom: 50px;
+    h1 {
+        font-size: 20px;
+        color: #194b77;
+        font-weight: 400;
+    }
+    p {
+        font-size: 12px;
+        font-weight: 400;
+        color: #6d6e71;
+        line-height: 1.5;
+    }
+}
+
+.request-container {
+    display: flex;
+    justify-content: space-between;
 }
 
 .request-list {
-  width: 24%;
-  float: left;
-  border: 1px solid #ddd;
-  padding: 5px;
+    border-radius: 2px;
+    background-color: $white;
+    box-shadow: 0 0 8px 0 rgba(210, 212, 225, 0.52);
+    flex-basis: calc(100% / 4 - 15px);
+    padding: 30px;
+    &__header {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.12;
+        color: #194b77;
+        margin-bottom: 30px;
+    }
+}
+
+.card {
+    min-height: 144px;
+    border-radius: 2px;
+    background: #ffffff;
+    border: solid 1px #00b2ac;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+
+    &--header, &--body {
+        display: flex;
+        flex: 1;
+    }
+    &--header {
+        justify-content: space-between;
+        padding: 20px 20px 0;
+
+        strong {
+            display: block;
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 1.5;
+            text-transform: uppercase;
+            color: #194b77;
+        }
+    }
+    &--body {
+        flex-direction: column;
+        background: rgba(250, 250, 250, 1);
+        padding: 0 20px;
+    }
+}
+
+.item-category {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #939598;
+    flex: 1;
+}
+
+.item-title {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: #194b77;
+}
+
+.item-date {
+    font-size: 12px;
+    font-style: italic;
+    line-height: 1.5;
+    color: #939598;
+}
+
+.item-price {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+    text-align: left;
+    align-items: center;
+    display: flex;
+    color: #007084;
+    flex: 1;
 }

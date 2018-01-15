@@ -3,10 +3,10 @@ import RequestList from './RequestList';
 
 const RequestsContainer = () => (
   <div className="request-container">
-    <RequestList status="DRAFT"/>
-    <RequestList status="NEW"/>
-    <RequestList status="SUBMITTED"/>
-    <RequestList status="PENDING"/>
+    <RequestList status="DRAFT" />
+    <RequestList status="NEW" />
+    <RequestList status="SUBMITTED" />
+    <RequestList status="PENDING" />
   </div>
 );
 

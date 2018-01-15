@@ -1,6 +1,6 @@
 @import '../../styles/variables';
 .header{
-  height: 65px;
+  min-height: 65px;
 	background: $brand-primary;
 	box-shadow: 0 0 8px 0 #e7e8ef;
 	display: flex;
