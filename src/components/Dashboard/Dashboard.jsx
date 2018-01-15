@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import RequestContainer from './RequestContainer/RequestContainer';
 import './dashboard.scss';
 
@@ -15,7 +16,7 @@ const Dashboard = () => (
         </p>
       </div>
       <div className="header-actions">
-        <button>New Request</button>
+        <Link to="/requests/new"><button>New Request</button></Link>
       </div>
     </div>
     <RequestContainer />
