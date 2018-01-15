@@ -1,13 +1,15 @@
-import {combineReducers, createStore} from 'redux';
+import {applyMiddleware, combineReducers, createStore} from 'redux';
 import {reducer as formReducer} from 'redux-form';
+import thunk from 'redux-thunk';
 import {composeWithDevTools} from 'redux-devtools-extension';
 
 const reducers = combineReducers({
   form: formReducer,
 });
+
 const store = createStore(
   reducers,
-  composeWithDevTools(),
+  composeWithDevTools(applyMiddleware(thunk)),
 );
 
 export default store;
