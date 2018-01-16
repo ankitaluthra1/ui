@@ -2,7 +2,7 @@ import React from 'react';
 import {Field} from 'redux-form';
 import PropTypes from 'prop-types';
 
-export default class RequestForm extends React.Component {
+export default class PreApprovalRequestForm extends React.Component {
   render() {
     const {handleSubmit, onSubmit} = this.props;
     return (
@@ -19,7 +19,7 @@ export default class RequestForm extends React.Component {
   }
 }
 
-RequestForm.propTypes = {
+PreApprovalRequestForm.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
 };

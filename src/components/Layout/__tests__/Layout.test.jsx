@@ -5,7 +5,7 @@ import Layout from '../Layout';
 import Header from '../../Header/Header';
 import Body from '../../Body/Body';
 import Dashboard from '../../Dashboard/Dashboard';
-import RequestFormContainer from '../../RequestForm/RequestFormContainer';
+import RequestFormContainer from '../../RequestForm/PreApprovalRequestFormContainer';
 
 describe('Layout Component', () => {
   const getComponent = () => shallow(<Layout />);

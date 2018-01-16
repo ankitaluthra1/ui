@@ -1,13 +1,13 @@
 import * as React from 'react';
 import {shallow} from 'enzyme';
-import RequestForm from '../RequestForm';
 import {Field} from 'redux-form';
+import PreApprovalRequestForm from '../PreApprovalRequestForm';
 
-describe('RequestForm component', () => {
+describe('PreApprovalRequestForm component', () => {
   const handleSubmit = jest.fn();
   const onSubmit = jest.fn();
 
-  const getComponent = () => shallow(<RequestForm
+  const getComponent = () => shallow(<PreApprovalRequestForm
     handleSubmit={handleSubmit}
     onSubmit={onSubmit}
   />);
