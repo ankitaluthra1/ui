@@ -6,10 +6,10 @@ import PreApprovalRequestBusinessContactsForm from './PreApprovalRequestBusiness
 
 export default class PreApprovalRequestForm extends React.Component {
   render() {
-    const {handleSubmit} = this.props;
+    const {handleSubmit, onSubmit} = this.props;
     return (
       <div>
-        <form onSubmit={handleSubmit(this.props.onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <PreApprovalRequestGeneralDetailsForm />
           <PreApprovalRequestDetailsForm />
           <PreApprovalRequestBusinessContactsForm />
