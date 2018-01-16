@@ -2,15 +2,17 @@ import React from 'react';
 import {Field, reduxForm} from 'redux-form';
 import validate from './validate';
 
-const renderField = ({ input, label, type, meta: { touched, error } }) => (
+const renderField = ({
+  input, label, type, meta: {touched, error},
+}) => (
   <div>
     <label>{label}</label>
     <div>
       <input {...input} placeholder={label} type={type} />
-      {touched && error && <span>{error}</span>}
+      {error && <span>{error}</span>}
     </div>
   </div>
-)
+);
 
 class PreApprovalRequestBusinessContactsForm extends React.Component {
   render() {
@@ -26,8 +28,13 @@ class PreApprovalRequestBusinessContactsForm extends React.Component {
   }
 }
 
+const initialValues = {
+  email: 'A',
+};
+
 export default reduxForm({
   form: 'PreApprovalRequestForm',
   destroyOnUnmount: false,
   validate,
+  initialValues,
 })(PreApprovalRequestBusinessContactsForm);
