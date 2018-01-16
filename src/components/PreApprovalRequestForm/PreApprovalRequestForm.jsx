@@ -1,20 +1,22 @@
 import React from 'react';
-import {Field} from 'redux-form';
 import PropTypes from 'prop-types';
+import PreApprovalRequestGeneralDetailsForm from './PreApprovalRequestGeneralDetailsForm';
+import PreApprovalRequestDetailsForm from './PreApprovalRequestDetailsForm';
+import PreApprovalRequestBusinessContactsForm from './PreApprovalRequestBusinessContactsForm';
 
 export default class PreApprovalRequestForm extends React.Component {
   render() {
-    const {handleSubmit, onSubmit} = this.props;
+    const {handleSubmit} = this.props;
     return (
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div>
-          <div className="requestor-name">
-            <label>Name of the requestor</label>
-            <Field name="requester" type="text" component="input" />
-          </div>
+      <div>
+        <form onSubmit={handleSubmit(this.props.onSubmit)}>
+          <PreApprovalRequestGeneralDetailsForm />
+          <PreApprovalRequestDetailsForm />
+          <PreApprovalRequestBusinessContactsForm />
           <button type="submit">Submit</button>
-        </div>
-      </form>
+        </form>
+      </div>
+
     );
   }
 }
