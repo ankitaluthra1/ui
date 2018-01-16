@@ -1,7 +1,7 @@
-import {RequestForActions, submitRequestForm} from '../requestFormActions';
+import {PreApprovalRequestForActions, submitRequestForm} from '../preApprovalRequestFormActions';
 import * as requestService from '../../../services/requestService';
 
-describe('RequestForm Actions', () => {
+describe('PreApprovalRequestForm Actions', () => {
   describe('SubmitRequestForm Actions', () => {
     let mockDispatch;
     let submitRequestSpy;
@@ -18,7 +18,7 @@ describe('RequestForm Actions', () => {
       submitRequestForm(form, mockDispatch);
 
       expect(mockDispatch).toHaveBeenCalledWith({
-        type: RequestForActions.REQUEST_FORM_SUBMISSION_STARTED,
+        type: PreApprovalRequestForActions.REQUEST_FORM_SUBMISSION_STARTED,
       });
     });
 
@@ -37,7 +37,7 @@ describe('RequestForm Actions', () => {
       await submitRequestForm(form, mockDispatch);
 
       expect(mockDispatch).toHaveBeenCalledWith({
-        type: RequestForActions.REQUEST_FORM_SUBMISSION_SUCCESSFUL,
+        type: PreApprovalRequestForActions.REQUEST_FORM_SUBMISSION_SUCCESSFUL,
         payload: response,
       });
     });
@@ -49,7 +49,7 @@ describe('RequestForm Actions', () => {
       await submitRequestForm(form, mockDispatch);
 
       expect(mockDispatch).toHaveBeenCalledWith({
-        type: RequestForActions.REQUEST_FORM_SUBMISSION_FAILED,
+        type: PreApprovalRequestForActions.REQUEST_FORM_SUBMISSION_FAILED,
         payload: errorResponse,
       });
     });
