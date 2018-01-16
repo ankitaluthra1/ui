@@ -2,6 +2,9 @@ import * as React from 'react';
 import {shallow} from 'enzyme';
 import {Field} from 'redux-form';
 import PreApprovalRequestForm from '../PreApprovalRequestForm';
+import PreApprovalRequestGeneralDetailsForm from '../PreApprovalRequestGeneralDetailsForm';
+import PreApprovalRequestDetailsForm from '../PreApprovalRequestDetailsForm';
+import PreApprovalRequestBusinessContactsForm from '../PreApprovalRequestBusinessContactsForm';
 
 describe('PreApprovalRequestForm component', () => {
   const handleSubmit = jest.fn();
@@ -12,16 +15,25 @@ describe('PreApprovalRequestForm component', () => {
     onSubmit={onSubmit}
   />);
 
-  it('should have field for requestor', () => {
+  it('should have PreApprovalRequestGeneralDetailsForm component', () => {
     const requestForm = getComponent();
 
-    const requestorField = requestForm.find(Field);
+    const requestorField = requestForm.find(PreApprovalRequestGeneralDetailsForm);
     expect(requestorField).toHaveLength(1);
+  });
 
-    const props = requestorField.props();
-    expect(props.name).toBe('requester');
-    expect(props.component).toBe('input');
-    expect(props.type).toBe('text');
+  it('should have PreApprovalRequestDetailsForm component', () => {
+    const requestForm = getComponent();
+
+    const requestorField = requestForm.find(PreApprovalRequestDetailsForm);
+    expect(requestorField).toHaveLength(1);
+  });
+
+  it('should have PreApprovalRequestBusinessContactsForm component', () => {
+    const requestForm = getComponent();
+
+    const requestorField = requestForm.find(PreApprovalRequestBusinessContactsForm);
+    expect(requestorField).toHaveLength(1);
   });
 
   it('should have submit button', () => {
@@ -36,14 +48,10 @@ describe('PreApprovalRequestForm component', () => {
   it('should call handleSubmit with onSubmit function on click of submit button', () => {
     const requestForm = getComponent();
 
-    const requestor = 'Some Requestor';
-
-    const requestorField = requestForm.find(Field);
     const submitButton = requestForm.find('button');
-
-    requestorField.simulate('change', {target: {value: requestor}});
     submitButton.simulate('click');
 
     expect(handleSubmit).toHaveBeenCalledWith(onSubmit);
+    // todo need to assert onSubmit gets called or not?
   });
 });
