@@ -10,13 +10,15 @@ class PreApprovalRequestGeneralDetailsForm extends React.Component {
           <label>Name of requester</label>
           <Field name="nameOfRequester" type="text" component="input" />
         </div>
-        <hr />
+        <hr/>
       </div>
     );
   }
 }
 
-export default reduxForm({
+reduxForm({
   form: 'PreApprovalRequestForm',
   destroyOnUnmount: false,
 })(PreApprovalRequestGeneralDetailsForm);
+
+export default PreApprovalRequestGeneralDetailsForm;
