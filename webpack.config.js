@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 
 
 const htmlConfig = {
@@ -26,8 +27,8 @@ module.exports = {
   },
   module: {
     rules: [
-      {test: /\.(js|jsx)$/, use: 'babel-loader', exclude: /node_modules/},
-      {test: /\.(scss|css)$/, use: ['style-loader', 'css-loader', 'sass-loader']},
+      {test: /\.(js|jsx)$/, use: 'babel-loader'},
+      {test: /\.(scss|css)$/, use: ['style-loader', 'css-loader', {loader: 'postcss-loader', options: {plugins: () => [autoprefixer()]}}, 'sass-loader']},
       {test: /\.(ttf|otf|eot|woff|woff2)$/, loader: 'url-loader'},
     ],
   },
