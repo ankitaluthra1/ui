@@ -7,6 +7,7 @@ class PreApprovalRequestBusinessContactsForm extends React.Component {
       <div>
         <h1>Tab 3</h1>
         <div className="requestor-name">
+          <label>External Participant</label>
           <Field
             name="externalParticipant"
             type="text"

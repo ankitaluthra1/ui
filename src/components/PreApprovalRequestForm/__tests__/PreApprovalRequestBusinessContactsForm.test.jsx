@@ -7,10 +7,11 @@ describe('PreApprovalRequestBusinessContactsForm component', () => {
   const getComponent = () => shallow(<PreApprovalRequestBusinessContactsForm />);
 
   it('should have PreApprovalRequestBusinessContactsForm component', () => {
-    const requestForm = getComponent();
+    const PreApprovalRequestBusinessContactsFormComponent = getComponent();
 
-    const requestorField = requestForm.find(Field);
+    const requestorField = PreApprovalRequestBusinessContactsFormComponent.find(Field);
     expect(requestorField).toHaveLength(1);
     expect(requestorField.prop('name')).toBe('externalParticipant');
+    expect(PreApprovalRequestBusinessContactsFormComponent.contains(<label>External Participant</label>)).toEqual(true);
   });
 });
