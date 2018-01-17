@@ -25,6 +25,7 @@
     "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
+    "autoprefixer": "^7.2.5",
     "babel-cli": "^6.26.0",
     "babel-jest": "^22.0.6",
     "babel-loader": "^7.1.2",
@@ -47,6 +48,7 @@
     "jest-cli": "^22.0.6",
     "node-sass": "^4.7.2",
     "normalize.css": "^7.0.0",
+    "postcss-loader": "^2.0.10",
     "react-test-renderer": "^16.2.0",
     "redux-devtools-extension": "^2.13.2",
     "sass-loader": "^6.0.6",
