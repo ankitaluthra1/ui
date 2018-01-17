@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {shallow} from 'enzyme';
 import {Field} from 'redux-form';
-import PreApprovalRequestGeneralDetailsForm from '../PreApprovalRequestGeneralDetailsForm';
+import PreApprovalRequestGeneralDetailsForm from '../../components/GeneralDetailsForm';
 
 describe('PreApprovalRequestForm component', () => {
 

@@ -1,6 +1,6 @@
 import {reduxForm} from 'redux-form';
-import PreApprovalRequestForm from './PreApprovalRequestForm';
-import {submitRequestForm} from './preApprovalRequestFormActions';
+import PreApprovalRequestForm from './RequestForm';
+import {submitRequestForm} from '../actions/actions';
 
 const PreApprovalRequestFormContainer = reduxForm({
   form: 'PreApprovalRequestForm',

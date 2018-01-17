@@ -16,9 +16,4 @@ class PreApprovalRequestGeneralDetailsForm extends React.Component {
   }
 }
 
-reduxForm({
-  form: 'PreApprovalRequestForm',
-  destroyOnUnmount: false,
-})(PreApprovalRequestGeneralDetailsForm);
-
 export default PreApprovalRequestGeneralDetailsForm;

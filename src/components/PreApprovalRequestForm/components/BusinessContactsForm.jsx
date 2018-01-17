@@ -22,8 +22,3 @@ class PreApprovalRequestBusinessContactsForm extends React.Component {
 }
 
 export default PreApprovalRequestBusinessContactsForm;
-
-reduxForm({
-  form: 'PreApprovalRequestForm',
-  destroyOnUnmount: false,
-})(PreApprovalRequestBusinessContactsForm);
