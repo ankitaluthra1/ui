@@ -5,8 +5,8 @@ import './dashboard.scss';
 
 const Dashboard = () => (
   <div className="dashboard">
-    <div className="intro-header">
-      <div className="heading">
+    <div className="row intro-header">
+      <div className="col-sm-12 col-xs-12 col-md-10 col-lg-10 heading">
         <h1>Request Dashboard</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet animi
@@ -15,11 +15,13 @@ const Dashboard = () => (
           Atque, quas.
         </p>
       </div>
-      <div className="header-actions">
-        <Link to="/requests/new"><button>New Request</button></Link>
+      <div className="col-sm-12 col-xs-12 col-md-2 col-lg-2 header-actions">
+        <Link to="/requests/new">
+          <button>New Request</button>
+        </Link>
       </div>
     </div>
-    <RequestContainer />
+    <RequestContainer/>
   </div>
 );
 
