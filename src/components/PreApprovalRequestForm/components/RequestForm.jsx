@@ -7,44 +7,41 @@ import DetailsForm from './DetailsForm';
 import BusinessContactsForm from './BusinessContactsForm';
 import '../../../styles/react-tabs.scss';
 
-export default class PreApprovalRequestForm extends React.Component {
-  render() {
-    const {handleSubmit, onSubmit} = this.props;
-    return (
-      <div>
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <Tabs>
-            <TabList>
-              <Tab>General details</Tab>
-              <Tab>Details</Tab>
-              <Tab>Business contacts</Tab>
-            </TabList>
+const RequestForm = ({handleSubmit, onSubmit}) => (
+  <div>
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <Tabs>
+        <TabList>
+          <Tab>General details</Tab>
+          <Tab>Details</Tab>
+          <Tab>Business contacts</Tab>
+        </TabList>
 
-            <TabPanel>
-              <FormSection name="data">
-                <GeneralDetailsForm />
-              </FormSection>
-            </TabPanel>
-            <TabPanel>
-              <FormSection name="data">
-                <DetailsForm />
-              </FormSection>
-            </TabPanel>
-            <TabPanel>
-              <FormSection name="data">
-                <BusinessContactsForm />
-              </FormSection>
-            </TabPanel>
-          </Tabs>
-          <button type="submit">Submit</button>
-        </form>
-      </div>
+        <TabPanel>
+          <FormSection name="data">
+            <GeneralDetailsForm />
+          </FormSection>
+        </TabPanel>
+        <TabPanel>
+          <FormSection name="data">
+            <DetailsForm />
+          </FormSection>
+        </TabPanel>
+        <TabPanel>
+          <FormSection name="data">
+            <BusinessContactsForm />
+          </FormSection>
+        </TabPanel>
+      </Tabs>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
 
-    );
-  }
-}
+);
 
-PreApprovalRequestForm.propTypes = {
+RequestForm.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
 };
+
+export default RequestForm;
