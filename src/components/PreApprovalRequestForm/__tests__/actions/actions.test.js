@@ -1,5 +1,5 @@
-import {PreApprovalRequestForActions, submitRequestForm} from '../preApprovalRequestFormActions';
-import * as requestService from '../../../services/requestService';
+import {PreApprovalRequestForActions, submitRequestForm} from '../../actions/actions';
+import * as requestService from '../../../../services/requestService';
 
 describe('PreApprovalRequestForm Actions', () => {
   describe('SubmitRequestForm Actions', () => {

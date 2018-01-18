@@ -1,16 +1,17 @@
 import * as React from 'react';
 import {shallow} from 'enzyme';
 import {Field} from 'redux-form';
-import PreApprovalRequestBusinessContactsForm from '../PreApprovalRequestBusinessContactsForm';
+import PreApprovalRequestBusinessContactsForm from '../../components/BusinessContactsForm';
 
 describe('PreApprovalRequestBusinessContactsForm component', () => {
   const getComponent = () => shallow(<PreApprovalRequestBusinessContactsForm />);
 
   it('should have PreApprovalRequestBusinessContactsForm component', () => {
-    const requestForm = getComponent();
+    const PreApprovalRequestBusinessContactsFormComponent = getComponent();
 
-    const requestorField = requestForm.find(Field);
+    const requestorField = PreApprovalRequestBusinessContactsFormComponent.find(Field);
     expect(requestorField).toHaveLength(1);
     expect(requestorField.prop('name')).toBe('externalParticipant');
+    expect(PreApprovalRequestBusinessContactsFormComponent.contains(<label>External Participant</label>)).toEqual(true);
   });
 });

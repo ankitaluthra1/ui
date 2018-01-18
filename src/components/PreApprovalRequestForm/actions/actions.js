@@ -1,4 +1,4 @@
-import * as requestService from '../../services/requestService';
+import * as requestService from '../../../services/requestService';
 
 // TODO: Fix format for action string
 

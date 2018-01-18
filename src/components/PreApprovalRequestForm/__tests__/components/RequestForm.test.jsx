@@ -1,10 +1,11 @@
 import * as React from 'react';
 import {shallow} from 'enzyme';
+import {FormSection} from 'redux-form';
 import {Tab, TabList, TabPanel, Tabs} from 'react-tabs';
-import PreApprovalRequestForm from '../PreApprovalRequestForm';
-import PreApprovalRequestGeneralDetailsForm from '../PreApprovalRequestGeneralDetailsForm';
-import PreApprovalRequestDetailsForm from '../PreApprovalRequestDetailsForm';
-import PreApprovalRequestBusinessContactsForm from '../PreApprovalRequestBusinessContactsForm';
+import PreApprovalRequestForm from '../../components/RequestForm';
+import PreApprovalRequestGeneralDetailsForm from '../../components/GeneralDetailsForm';
+import PreApprovalRequestDetailsForm from '../../components/DetailsForm';
+import PreApprovalRequestBusinessContactsForm from '../../components/BusinessContactsForm';
 
 describe('PreApprovalRequestForm component', () => {
   const handleSubmit = jest.fn();
@@ -50,11 +51,13 @@ describe('PreApprovalRequestForm component', () => {
     const requestForm = getShallowComponent();
 
     const tabPanels = requestForm.find(TabPanel);
+    const formSections = requestForm.find(FormSection);
 
     expect(tabPanels).toHaveLength(3);
-    expect(tabPanels.at(0).props().children).toEqual(<PreApprovalRequestGeneralDetailsForm />);
-    expect(tabPanels.at(1).props().children).toEqual(<PreApprovalRequestDetailsForm />);
-    expect(tabPanels.at(2).props().children).toEqual(<PreApprovalRequestBusinessContactsForm />);
+    expect(formSections).toHaveLength(3);
+    expect(formSections.at(0).props().children).toEqual(<PreApprovalRequestGeneralDetailsForm />);
+    expect(formSections.at(1).props().children).toEqual(<PreApprovalRequestDetailsForm />);
+    expect(formSections.at(2).props().children).toEqual(<PreApprovalRequestBusinessContactsForm />);
   });
 
   it('should have submit button', () => {

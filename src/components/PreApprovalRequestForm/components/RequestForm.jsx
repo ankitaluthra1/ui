@@ -1,10 +1,11 @@
 import React from 'react';
+import {FormSection} from 'redux-form';
 import PropTypes from 'prop-types';
-import PreApprovalRequestGeneralDetailsForm from './PreApprovalRequestGeneralDetailsForm';
-import PreApprovalRequestDetailsForm from './PreApprovalRequestDetailsForm';
-import PreApprovalRequestBusinessContactsForm from './PreApprovalRequestBusinessContactsForm';
 import {Tab, TabList, TabPanel, Tabs} from 'react-tabs';
-import '../../styles/react-tabs.scss';
+import PreApprovalRequestGeneralDetailsForm from './GeneralDetailsForm';
+import PreApprovalRequestDetailsForm from './DetailsForm';
+import PreApprovalRequestBusinessContactsForm from './BusinessContactsForm';
+import '../../../styles/react-tabs.scss';
 
 export default class PreApprovalRequestForm extends React.Component {
   render() {
@@ -20,13 +21,19 @@ export default class PreApprovalRequestForm extends React.Component {
             </TabList>
 
             <TabPanel>
-              <PreApprovalRequestGeneralDetailsForm/>
+              <FormSection>
+                <PreApprovalRequestGeneralDetailsForm />
+              </FormSection>
             </TabPanel>
             <TabPanel>
-              <PreApprovalRequestDetailsForm/>
+              <FormSection>
+                <PreApprovalRequestDetailsForm />
+              </FormSection>
             </TabPanel>
             <TabPanel>
-              <PreApprovalRequestBusinessContactsForm/>
+              <FormSection>
+                <PreApprovalRequestBusinessContactsForm />
+              </FormSection>
             </TabPanel>
           </Tabs>
           <button type="submit">Submit</button>
