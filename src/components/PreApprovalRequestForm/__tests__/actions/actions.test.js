@@ -1,7 +1,7 @@
 import {PreApprovalRequestForActions, submitRequestForm} from '../../actions/actions';
 import * as requestService from '../../../../services/requestService';
 
-describe('PreApprovalRequestForm Actions', () => {
+describe('RequestForm Actions', () => {
   describe('SubmitRequestForm Actions', () => {
     let mockDispatch;
     let submitRequestSpy;

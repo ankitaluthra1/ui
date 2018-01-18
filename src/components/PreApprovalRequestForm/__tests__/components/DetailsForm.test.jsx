@@ -1,12 +1,12 @@
 import * as React from 'react';
 import {shallow} from 'enzyme';
 import {Field} from 'redux-form';
-import PreApprovalRequestDetailsForm from '../../components/DetailsForm';
+import DetailsForm from '../../components/DetailsForm';
 
-describe('PreApprovalRequestDetailsForm component', () => {
-  const getComponent = () => shallow(<PreApprovalRequestDetailsForm />);
+describe('DetailsForm component', () => {
+  const getComponent = () => shallow(<DetailsForm />);
 
-  it('should have PreApprovalRequestDetailsForm component', () => {
+  it('should have DetailsForm component', () => {
     const PreApprovalRequestDetailsFormComponent = getComponent();
 
     const requestorField = PreApprovalRequestDetailsFormComponent.find(Field);

@@ -1,7 +1,7 @@
 import React from 'react';
-import {Field, reduxForm} from 'redux-form';
+import {Field} from 'redux-form';
 
-class PreApprovalRequestGeneralDetailsForm extends React.Component {
+class GeneralDetailsForm extends React.Component {
   render() {
     return (
       <div>
@@ -16,4 +16,4 @@ class PreApprovalRequestGeneralDetailsForm extends React.Component {
   }
 }
 
-export default PreApprovalRequestGeneralDetailsForm;
+export default GeneralDetailsForm;
