@@ -11,8 +11,8 @@ describe('RequestForm component', () => {
     const GeneralDetailsRequestForm = getComponent();
 
     const requestorField = GeneralDetailsRequestForm.find(Field);
-    expect(requestorField).toHaveLength(1);
-    expect(requestorField.prop('name')).toBe('nameOfRequester');
-    expect(GeneralDetailsRequestForm.contains(<label>Name of requester</label>)).toEqual(true);
+    const labelField = GeneralDetailsRequestForm.find('label');
+    expect(requestorField).toHaveLength(6);
+    expect(labelField).toHaveLength(6);
   });
 });
