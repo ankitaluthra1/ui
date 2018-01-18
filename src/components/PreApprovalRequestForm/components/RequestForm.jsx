@@ -21,17 +21,17 @@ export default class PreApprovalRequestForm extends React.Component {
             </TabList>
 
             <TabPanel>
-              <FormSection>
+              <FormSection name="data">
                 <GeneralDetailsForm />
               </FormSection>
             </TabPanel>
             <TabPanel>
-              <FormSection>
+              <FormSection name="data">
                 <DetailsForm />
               </FormSection>
             </TabPanel>
             <TabPanel>
-              <FormSection>
+              <FormSection name="data">
                 <BusinessContactsForm />
               </FormSection>
             </TabPanel>
