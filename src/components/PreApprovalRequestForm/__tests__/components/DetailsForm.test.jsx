@@ -7,12 +7,11 @@ describe('DetailsForm component', () => {
   const getComponent = () => shallow(<DetailsForm />);
 
   it('should have DetailsForm component', () => {
-    const PreApprovalRequestDetailsFormComponent = getComponent();
+    const DetailsFormComponent = getComponent();
 
-    const requestorField = PreApprovalRequestDetailsFormComponent.find(Field);
-    expect(requestorField).toHaveLength(1);
-    expect(requestorField.prop('name')).toBe('purposeOfEntertainment');
-    expect(PreApprovalRequestDetailsFormComponent
-      .contains(<label>Purpose of entertainment</label>)).toEqual(true);
+    const requestorField = DetailsFormComponent.find(Field);
+    const label = DetailsFormComponent.find('label');
+    expect(requestorField).toHaveLength(5);
+    expect(label).toHaveLength(5);
   });
 });
