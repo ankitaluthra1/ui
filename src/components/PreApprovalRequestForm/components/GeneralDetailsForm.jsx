@@ -6,9 +6,9 @@ const GeneralDetailsForm = () =>
     <div>
       <h1>General</h1>
       <div className="requestor-name">
-        <label htmlFor="requesterName">
+        <label htmlFor="requestorPid">
           Name of requester
-          <Field name="requesterName" type="text" component="input" />
+          <Field name="requestorPid" type="text" component="input" />
         </label>
       </div>
       <div className="requestor-name">
@@ -18,7 +18,7 @@ const GeneralDetailsForm = () =>
         </label>
       </div>
       <div className="requestor-name">
-        <label htmlFor="requesterMode">
+        <label htmlFor="requestMode">
           Are you Giving or Receiving?
           <Field name="requestMode" type="text" component="input" />
         </label>
