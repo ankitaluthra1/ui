@@ -1,5 +1,5 @@
 import ApiGateway from './apiGateway';
 
-const submitRequestUrl = 'request';
+const submitRequestUrl = 'requests';
 
 export const submitRequest = request => ApiGateway.post(submitRequestUrl, request);

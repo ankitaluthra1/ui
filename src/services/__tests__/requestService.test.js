@@ -8,6 +8,6 @@ describe('Request Service', () => {
     const request = {name: 'Luke Skywalker'};
     submitRequest(request);
 
-    expect(ApiGateway.post).toHaveBeenCalledWith('request', request);
+    expect(ApiGateway.post).toHaveBeenCalledWith('requests', request);
   });
 });
