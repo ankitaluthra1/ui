@@ -12,7 +12,7 @@ describe('RequestForm component', () => {
 
     const requestorField = GeneralDetailsRequestForm.find(Field);
     const labelField = GeneralDetailsRequestForm.find('label');
-    expect(requestorField).toHaveLength(6);
-    expect(labelField).toHaveLength(6);
+    expect(requestorField).toHaveLength(9);
+    expect(labelField).toHaveLength(9);
   });
 });

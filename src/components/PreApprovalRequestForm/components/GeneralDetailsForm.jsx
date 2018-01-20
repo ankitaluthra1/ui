@@ -30,6 +30,24 @@ const GeneralDetailsForm = () =>
         </label>
       </div>
       <div className="requestor-name">
+        <label htmlFor="country">
+          Country
+          <Field name="country" type="text" component="input" />
+        </label>
+      </div>
+      <div className="requestor-name">
+        <label htmlFor="division">
+          divsion
+          <Field name="division" type="text" component="input" />
+        </label>
+      </div>
+      <div className="requestor-name">
+        <label htmlFor="csLegalEntity">
+          csLegalEntity
+          <Field name="csLegalEntity" type="text" component="input" />
+        </label>
+      </div>
+      <div className="requestor-name">
         <label htmlFor="proposedStartDate">
           Proposed Start Date
           <Field name="proposedStartDate" type="text" component="input" />
