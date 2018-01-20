@@ -18,17 +18,17 @@ const RequestForm = ({handleSubmit, onSubmit}) => (
         </TabList>
 
         <TabPanel>
-          <FormSection name="data">
+          <FormSection name="">
             <GeneralDetailsForm />
           </FormSection>
         </TabPanel>
         <TabPanel>
-          <FormSection name="data">
+          <FormSection name="">
             <DetailsForm />
           </FormSection>
         </TabPanel>
         <TabPanel>
-          <FormSection name="data">
+          <FormSection name="">
             <BusinessContactsForm />
           </FormSection>
         </TabPanel>
